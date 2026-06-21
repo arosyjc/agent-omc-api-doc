@@ -1,0 +1,21 @@
+[project]
+name = "omc-api-doc"
+version = "0.1.0"
+description = "yunting omc's api automatically tool "
+readme = "README.md"
+requires-python = ">=3.12.0"
+dependencies = [
+    "gitpython>=3.1.50",
+    "javalang>=0.13.0",
+    "openai>=2.43.0",
+    "pydantic>=2.13.4",
+    "python-dotenv>=1.2.2",
+    "tree-sitter>=0.25.2",
+    "tree-sitter-java>=0.23.5",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=2.1.0",
+    "ruff>=0.15.18",
+]
