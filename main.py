@@ -1,4 +1,4 @@
-from tree_sitter import Language, Parser
+from tree_sitter import Language, Parser,compile_library
 import os
 
 # define JAVA grammar path
@@ -9,7 +9,7 @@ if not os.path.exists(JAVA_GRAMMAR_PATH):
     import subprocess
 
     repo_url = "https://github.com/tree-sitter/tree-sitter-java"
-    target_dir = "java1.8"
+    target_dir = "./java1.8"
     # create target directory if it does not exist
     if not os.path.exists(target_dir):
         os.makedirs(target_dir)
@@ -17,11 +17,8 @@ if not os.path.exists(JAVA_GRAMMAR_PATH):
     subprocess.run(["git", "clone", repo_url, target_dir], check=True)
 
 # 编译语法
-lang_lib = Language.build_library("languages.so", [JAVA_GRAMMAR_PATH])
-JAVA_LANG = Language(lang_lib, "java")
-parser = Parser()
-parser.set_language(JAVA_LANG)
-
+JAVA_LANG = Language("languages.so", "java")
+parser = Parser(jAVA_LANG)
 # java code root path
 src_code_path="/mnt/e/projects/cnr/omc-live"
 # java code relative path
