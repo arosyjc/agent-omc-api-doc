@@ -1,4 +1,7 @@
 {
+  "parser-directories": [
+    "/e/projects/github/agent-omc-api-doc"
+  ],
   "grammars": [
     {
       "name": "java",
