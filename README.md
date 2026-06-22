@@ -1,7 +1,9 @@
 # agent-omc-api-doc
-
+1.using tree-sitter and tree-sitter-java to parse JAVA WEB Project to generate API doc
+2.using LLM like (Deepseek/Openai/Anthoropic,and so on)to summarize Java Controller
+3.generate OpenAPI protocal output doc,using Re-Doc to Show Everyone the API doc.
 # 安装 tree-sitter cli
-npm install -g tree-sitter-cli
+npm install -g tree-sitter-cli@0.24.7
 # 编译 java grammar 生成 languages.so
 tree-sitter build --output languages.so ./tree-sitter-java/src
 
